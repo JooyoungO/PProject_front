@@ -30,6 +30,7 @@ import Card from './components/Card/Card';
 import './App.css';
 // import BottomNav from './components/BottomBar/BottomNav';
 
+
 // import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
