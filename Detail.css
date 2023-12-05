@@ -1,0 +1,43 @@
+.Detail-wrapper {
+    width: 358px;
+    height: 844px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.Detail-wrapper img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.Detail-title {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FFF;
+font-family: Pretendard;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.footer-button {
+    position: fixed;
+    bottom: 0;
+    border-radius: 12px;
+    background: #214FC7;
+    color: #FFFFFF;
+    padding: auto;
+}
+
+.Detail-user {
+    display: inline;
+    font-family: Pretendard;
+    font-style: normal;
+    line-height: normal;
+}
+
