@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -43,7 +44,8 @@
     margin: 0 auto; /* 화면을 중앙에 배치 */
     overflow: hidden; /* 내용이 지정된 크기를 넘어가면 숨김 처리 */
     position: relative; /* 포지셔닝 컨텍스트를 지정 */
-    font-family: 'Arial', sans-serif;
     background-color: antiquewhite;
     margin-top: 130px;
+    font-family: SOYOMapleRegular;
+
   }

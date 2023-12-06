@@ -4,6 +4,8 @@
     margin: 0 auto;
     position: relative;
     text-align: center;
+    font-family: SOYOMapleRegular;
+
 }
 
 .Detail-image img{
@@ -14,12 +16,13 @@
 
 .Detail-title {
     position: absolute;
-    top: 33.5%;
+    top: 30%;
+    left: 3%;
     width: 100%;
     /* transform: translate(-50%, -50%); */
     text-align: left;
     color: white;
-font-family: Pretendard;
+font-family: SOYOMapleRegular;
 font-size: 32px;
 font-style: normal;
 font-weight: 700;
@@ -33,7 +36,7 @@ line-height: normal;
     background-color: #EFEFEF;
     border-radius: 20px;
     align-content: center;
-    padding-top: 1px;
+    padding-top: 1%;
     padding-bottom: 16px;
 }
 
@@ -55,4 +58,10 @@ line-height: normal;
 
 .Detail-user p {
     margin-top: 10px; /* 기본 마진 제거 */
+}
+
+@font-face {
+    font-family: 'SOYOMapleRegular';
+    font-weight: normal;
+    src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
 }

@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import Main from './App';
-import Detail from './Detail';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./pages/Cardlist/App";
+import reportWebVitals from "./reportWebVitals";
+import Main from "./pages/Cardlist/App";
+import Detail from "./pages/Detail/Detail";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Detail />
