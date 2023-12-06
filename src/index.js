@@ -5,11 +5,12 @@ import App from "./pages/Cardlist/App";
 import reportWebVitals from "./reportWebVitals";
 import Main from "./pages/Cardlist/App";
 import Detail from "./pages/Detail/Detail";
+import Reward from "./pages/Reward/Reward";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Detail />
+    <Reward />
   </React.StrictMode>
 );
 

@@ -28,9 +28,10 @@ import React from "react";
 import Card from "../../components/Card/Card";
 //import Navbar from './components/Navbar/Navbar';
 import "./App.css";
+import Detail from '../Detail/Detail';
 // import BottomNav from './components/BottomBar/BottomNav';
 
-// import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -42,6 +43,11 @@ function App() {
         description="여기에 카드 설명을 적습니다."
       />
       {/* <BottomNav /> */}
+      <Router>
+        <Routes>
+          <Route path='../detail' element={<Detail />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
