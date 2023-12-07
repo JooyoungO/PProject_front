@@ -1,7 +1,18 @@
+import React from 'react';
+import './Button.css';
 
+const Button = ({ text, color, backgroundColor, borderColor, onClick }) => {
+  const buttonStyle = {
+    color: color,
+    backgroundColor: backgroundColor,
+    borderColor: borderColor,
+  };
 
-function Button({ disabled, children }) {
-    return <button disabled={disabled}>{children}</button>;
-  }
-  
-  export default Button;
+  return (
+    <button className="button" style={buttonStyle} onClick={onClick}>
+      {text}
+    </button>
+  );
+};
+
+export default Button;

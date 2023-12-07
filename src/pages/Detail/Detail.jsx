@@ -3,12 +3,13 @@
 // import axios from 'axios'; //*api 불러오면 주석해제
 import React, { useState } from 'react'; //api 불러오면 삭제
 import './Detail.css';
+import Button from '../../components/Button/Button';
 
 function Detail() {
     // 임시 데이터로 상태 초기화
     const [model] = useState({
         image: 'https://via.placeholder.com/150',
-        title: '임시 제목',
+        title: '제목의 길이가 길어도 잘 들어가는지 확인중',
         userName: '사용자 이름',
         participantCount: '100',
         reward: '50',
@@ -42,6 +43,10 @@ function Detail() {
 //         fetchData();
 //     }, [id]);   //*api 불러오면 주석해제
 
+    function onParticipationClickHandler() {
+        console.log('참여하기 버튼을 눌렀어요!');
+    }
+
     return (
         <div className='Detail-wrapper'>
             <div className='Detail-image'>
@@ -71,7 +76,13 @@ function Detail() {
                 </p>
             </div>
 
-            <div className='footer-button'>참여하기</div>
+            <Button 
+                text='참여하기'
+                color='#ffffff'
+                backgroundColor='#214FC7'
+                borderColor='#214FC7'
+                onClick={onParticipationClickHandler}
+                />
         </div>
     );
 }

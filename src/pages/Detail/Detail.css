@@ -16,9 +16,10 @@
 
 .Detail-title {
     position: absolute;
-    top: 30%;
-    left: 3%;
-    width: 100%;
+    top: 27%;
+    flex-shrink: 0;
+    width: 358px;
+    margin: 16px;
     /* transform: translate(-50%, -50%); */
     text-align: left;
     color: white;
@@ -30,7 +31,7 @@ line-height: normal;
 }
 
 .Detail-condition {
-    width: 390px;
+    width: 358px;
     height: 95px;
     flex-shrink: 0;
     background-color: #EFEFEF;
@@ -38,17 +39,6 @@ line-height: normal;
     align-content: center;
     padding-top: 1%;
     padding-bottom: 16px;
-}
-
-.footer-button {
-    position: fixed;
-    width: 390px;
-    bottom: 0;
-    border-radius: 12px;
-    background: #214FC7;
-    color: #FFFFFF;
-    padding: 10px ;
-    margin-bottom: 10px;
 }
 
 .Detail-user {
