@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';  // react-router-dom에서 Link 가져오기
 import Trading from '../../components/Trading/Trading';
 import './Reward.css';
 import cat from "../../images/cat.png";
@@ -18,7 +19,7 @@ function Reward({listTitle}) {
     });
 
     function onSendClickHandler() {
-        console.log('이체하기 버튼을 눌렀어요')
+        window.location.href='./RewardSend.jsx';
     }
 
     return (
@@ -29,7 +30,7 @@ function Reward({listTitle}) {
                 color: 'black', margin:'60px 0px 0px 16px', fontSize:'16px', fontSize:'16px'}}>당신의 리워드는</p>
             <p style={{margin:'6px 16px', fontSize:'32px'}}><b>{model ? model.myReward : "Loading..."} </b></p>
             <p style={{margin:'6px 16px', fontSize:'16px'}}>입니다.</p>
-            <div className='SendButton' onClick={onSendClickHandler}>이체하기</div>
+            <Link to="/RewardSend" className='SendButton'>이체하기</Link>
             <p style={{color:'#A5A5A5', marginLeft:'16px'}}>거래내역</p>
             <Trading
             image src={model ? model.image : "defaul_image.png"} 

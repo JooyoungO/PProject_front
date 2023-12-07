@@ -15,6 +15,7 @@ import RewardDeposit from './pages/RewardDeposit/RewardDeposit';
 import DepositSuccess from './pages/DepositSuccess/DepositSuccess';
 import Reward2 from './pages/Reward2/Reward2';
 import DetailCollector from './pages/DetailCollector/DetailCollector';
+import User from './pages/User/User';
 
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -26,7 +27,7 @@ import DetailCollector from './pages/DetailCollector/DetailCollector';
 //중요한 코드!
  ReactDOM.render(
  <React.StrictMode>
- <DetailCollector />
+ <User />
  </React.StrictMode>,
  document.getElementById('root')
 );
