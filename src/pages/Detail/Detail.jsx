@@ -75,14 +75,7 @@ function Detail() {
                     {model ? model.description : 'Loading...'}
                 </p>
             </div>
-
-            <Button 
-                text='참여하기'
-                color='#ffffff'
-                backgroundColor='#214FC7'
-                borderColor='#214FC7'
-                onClick={onParticipationClickHandler}
-                />
+                
         </div>
     );
 }

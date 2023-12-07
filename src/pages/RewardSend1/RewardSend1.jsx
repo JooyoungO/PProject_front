@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './SendInput1.css';
+import './RewardSend1.css';
 import Button from '../../components/Button/Button';
 
 function SendInput1() {
