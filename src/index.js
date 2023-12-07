@@ -7,11 +7,12 @@ import Main from "./pages/Cardlist/App";
 import Detail from "./pages/Detail/Detail";
 import Reward from "./pages/Reward/Reward";
 import RewardSend from './pages/RewardSend/RewardSend';
+import SendSuccess from './pages/SendSuccess/SendSuccess';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RewardSend />
+    <SendSuccess />
   </React.StrictMode>
 );
 
