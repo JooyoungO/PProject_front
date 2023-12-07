@@ -1,4 +1,4 @@
-.reward {
+.RewardDeposit {
     width: 390px;
     height: 844px;
     margin: 0 auto;
@@ -6,15 +6,19 @@
     font-family: 'SOYOMapleRegular';
 }
 
-.SendButton {
+.nextbutton {
+    position: fixed;
     width: 358px;
     height: 34px;
     border-radius: 12px;
-    border: 1px solid var(--primary, #214FC7);
-    background-color: white;
-    color: #214FC7;
+    background-color: #A5A5A5;
+    color: white;
     text-align: center;
     padding-top: 7px;
     margin: 16px;
     bottom: 16px;
+}
+
+.nextbutton.blue {
+    background-color: rgb(33, 79, 199);
 }

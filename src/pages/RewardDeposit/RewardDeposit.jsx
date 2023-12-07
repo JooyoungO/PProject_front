@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./RewardSend.css";
+import "./RewardDeposit.css";
 
-function RewardSend() {
+function RewardDeposit() {
   const [model] = useState({
     databank: "이상한 hex형",
     mywallet: "얘도 이상한 hex형",
@@ -21,7 +21,7 @@ function RewardSend() {
   }
 
   return (
-    <div className="RewardSend" style={{ position: "relative" }}>
+    <div className="RewardDeposit" style={{ position: "relative" }}>
       {/* 상단바가 들어오면 margin 값을 변경해줘야 함 
                 상단바와 '결제 정보' 간격은 32px */}
       <p
@@ -40,6 +40,15 @@ function RewardSend() {
           fontWeight: "bolder",
         }}
       >
+        내 지갑 ({model ? model.mywallet : "Loading..."})
+      </p>
+      <p
+        style={{
+          margin: "12px 16px 5px 16px",
+          fontSize: "19px",
+          fontWeight: "bolder",
+        }}
+      >
         데이터뱅크 ({model ? model.databank : "Loading..."})
       </p>
       <p
@@ -49,7 +58,7 @@ function RewardSend() {
           fontWeight: "bolder",
         }}
       >
-        내 지갑 ({model ? model.mywallet : "Loading..."})으로 보냅니다.
+         으로 보냅니다.
       </p>
       <input
         type="text"
@@ -97,4 +106,4 @@ function RewardSend() {
   );
 }
 
-export default RewardSend;
+export default RewardDeposit;
