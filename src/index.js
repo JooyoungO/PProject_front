@@ -16,6 +16,8 @@ import DepositSuccess from './pages/DepositSuccess/DepositSuccess';
 import Reward2 from './pages/Reward2/Reward2';
 import DetailCollector from './pages/DetailCollector/DetailCollector';
 import User from './pages/User/User';
+import SignOut from './pages/SignOut/SignOut';
+import Card from './components/Card/Card';
 
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -27,7 +29,7 @@ import User from './pages/User/User';
 //중요한 코드!
  ReactDOM.render(
  <React.StrictMode>
- <User />
+ <SignOut />
  </React.StrictMode>,
  document.getElementById('root')
 );

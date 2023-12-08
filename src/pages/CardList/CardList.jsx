@@ -45,7 +45,7 @@ function CardList({ listTitle }) {
 
   return (
     <>
-      <DataTradeList listTitle={listTitle} />
+      {/* <DataTradeList listTitle={listTitle} /> */}
       <div className="card-list">
         {cards.map((card, index) => (
           <Link key={index} to={`/detail/${card.id}`}>  {/* id 값을 URL에 포함시킵니다 */}
