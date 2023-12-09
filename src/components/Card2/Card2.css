@@ -14,21 +14,7 @@
     width: 100%;
     height: auto; /* 이미지 비율에 따라 조정*/
   }
-  
-  .card-details {
-    padding: 8px;
-  }
-  
-  .card-title {
-    font-size: 16px;
-    color: #333333;
-    margin-bottom: 4px;
-  }
-  
-  .card-description {
-    font-size: 14px;
-    color: #666666;
-  }
+
 
   .card-tag {
     position: absolute;

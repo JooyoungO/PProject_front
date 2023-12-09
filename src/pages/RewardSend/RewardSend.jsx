@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./RewardSend.css";
+import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
+import PointNavbar from '../../components/PointNavbar/PointNavbar';
 
 function RewardSend() {
   const [model] = useState({
@@ -21,13 +23,13 @@ function RewardSend() {
   }
 
   return (
+    <>
+    <BackDataTradeList listTitle={"리워드 이체"} />
     <div className="RewardSend" style={{ position: "relative" }}>
-      {/* 상단바가 들어오면 margin 값을 변경해줘야 함 
-                상단바와 '결제 정보' 간격은 32px */}
       <p
         style={{
           color: "black",
-          margin: "120px 16px 16px 16px",
+          margin: "32px 16px 16px 16px",
           fontSize: "16px",
         }}
       >
@@ -94,6 +96,8 @@ function RewardSend() {
       </p>
       <div className={`nextbutton ${isAmountInputVisible ? 'blue' : ''}`} onClick={onNextClickHandler}>다음</div>
     </div>
+    <PointNavbar />
+    </>
   );
 }
 

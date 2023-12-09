@@ -3,6 +3,7 @@ import Trading from '../../components/Trading/Trading';
 import './Reward2.css';
 import cat from "../../images/cat.png";
 import DataTradeList from '../../components/DataTradeList/DataTradeList';
+import PointNavbar from '../../components/PointNavbar/PointNavbar';
 
 
 function Reward2({listTitle}) {
@@ -22,10 +23,10 @@ function Reward2({listTitle}) {
 
     return (
         <>
-        {/* <DataTradeList listTitle={{listTitle}} /> */}
+        <DataTradeList listTitle={"잔액"} />
         <div className='reward'>
             <p style={{ 
-                color: 'black', margin:'60px 0px 0px 16px', fontSize:'16px', fontSize:'16px'}}>당신의 리워드는</p>
+                color: 'black', margin:'16px 0px 0px 16px', fontSize:'16px', fontSize:'16px'}}>당신의 리워드는</p>
             <p style={{margin:'6px 16px', fontSize:'32px'}}><b>{model ? model.myReward : "Loading..."} </b></p>
             <p style={{margin:'6px 16px', fontSize:'16px'}}>입니다.</p>
             <div className='DepositButton' onClick={onSendClickHandler}>입금하기</div>
@@ -59,6 +60,7 @@ function Reward2({listTitle}) {
             balance= {model ? model.balance : "Loading..."}
             />
         </div>
+        <PointNavbar />
     </>
     )
 }

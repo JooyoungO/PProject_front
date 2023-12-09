@@ -3,6 +3,8 @@
 // import axios from 'axios'; //*api 불러오면 주석해제
 import React, { useState } from 'react'; //api 불러오면 삭제
 import './DetailCollector.css';
+import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
+import DataNavbar from '../../components/DataNavbar/DataNavbar';
 
 function DetailCollector() {
     // 임시 데이터로 상태 초기화
@@ -43,6 +45,8 @@ function DetailCollector() {
 //     }, [id]);   //*api 불러오면 주석해제
 
     return (
+        <>
+        <BackDataTradeList />
         <div className='Detail-wrapper'>
             <div className='Detail-image'>
                 <img src={model ? model.image : 'default_image.png'} alt={model ? model.title : 'Loading...'} />
@@ -70,9 +74,10 @@ function DetailCollector() {
                     {model ? model.description : 'Loading...'}
                 </p>
             </div>
-
             <div className='footer-button'>수집 데이터 관리</div>
         </div>
+        <DataNavbar />
+        </>
     );
 }
 

@@ -3,6 +3,8 @@
 // import axios from 'axios'; //*api 불러오면 주석해제
 import React, { useState } from 'react'; //api 불러오면 삭제
 import './Detail.css';
+import DataNavbar from '../../components/DataNavbar/DataNavbar';
+import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
 
 function Detail() {
     // 임시 데이터로 상태 초기화
@@ -10,8 +12,8 @@ function Detail() {
         image: 'https://via.placeholder.com/150',
         title: '임시 제목',
         userName: '사용자 이름',
-        participantCount: '100',
-        reward: '50',
+        participantCount: '참여인원',
+        reward: '리워드',
         conditions: ['고양이 전신 사진이 촬영되어야 합니다.'],
         description: '😎 안녕하세요. 저희는 고양이 전신 사진을 100장 정도 확보하는 것을 목표로 하고 있습니다...',
     });
@@ -43,6 +45,8 @@ function Detail() {
 //     }, [id]);   //*api 불러오면 주석해제
 
     return (
+        <>
+        <BackDataTradeList />
         <div className='Detail-wrapper'>
             <div className='Detail-image'>
                 <img src={model ? model.image : 'default_image.png'} alt={model ? model.title : 'Loading...'} />
@@ -73,6 +77,8 @@ function Detail() {
 
             <div className='footer-button'>참여하기</div>
         </div>
+        <DataNavbar />
+        </>
     );
 }
 

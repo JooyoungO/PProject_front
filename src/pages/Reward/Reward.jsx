@@ -5,6 +5,8 @@ import './Reward.css';
 import cat from "../../images/cat.png";
 import Button from '../../components/Button/Button';
 import DataTradeList from '../../components/DataTradeList/DataTradeList';
+import PointNavBar from '../../components/PointNavbar/PointNavbar';
+
 
 
 function Reward({listTitle}) {
@@ -24,13 +26,13 @@ function Reward({listTitle}) {
 
     return (
         <>
-        {/* <DataTradeList listTitle={{listTitle}} /> */}
+        <DataTradeList listTitle={"리워드"} />
         <div className='reward'>
             <p style={{ 
                 color: 'black', margin:'60px 0px 0px 16px', fontSize:'16px', fontSize:'16px'}}>당신의 리워드는</p>
             <p style={{margin:'6px 16px', fontSize:'32px'}}><b>{model ? model.myReward : "Loading..."} </b></p>
             <p style={{margin:'6px 16px', fontSize:'16px'}}>입니다.</p>
-            <Link to="/RewardSend" className='SendButton'>이체하기</Link>
+            <Link to="/RewardSend" className='SendButton'><b>이체하기</b></Link>
             <p style={{color:'#A5A5A5', marginLeft:'16px'}}>거래내역</p>
             <Trading
             image src={model ? model.image : "defaul_image.png"} 
@@ -61,6 +63,7 @@ function Reward({listTitle}) {
             balance= {model ? model.balance : "Loading..."}
             />
         </div>
+        <PointNavBar />
     </>
     )
 }

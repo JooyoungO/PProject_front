@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './User.css';
+import UserNavbar from '../../components/UserNavbar/UserNavbar';
+import DataTradeList from '../../components/DataTradeList/DataTradeList';
 
 function User() {
 
@@ -7,6 +9,8 @@ function User() {
         name: '본인이름'
     })
     return(
+        <>
+        <DataTradeList listTitle={"사용자"} />
         <div className='user'>
             <p style={{ 
                 color: 'black', margin:'32px 0px 0px 16px', fontSize:'24px', fontFamily:'SOYOMapleRegular'}}>
@@ -18,6 +22,8 @@ function User() {
                 <p>❌ 회원탈퇴</p>
             </div>
         </div>
+        <UserNavbar />
+        </>
     )
 }
 

@@ -3,11 +3,11 @@ import React, { useState } from 'react'; //api 받아오면 삭제하기
 import { Link } from 'react-router-dom';
 // import axios from 'axios';  //api 받아오면 주석 풀기
 import Card from '../../components/Card/Card';
-import DataTradeList from '../../components/DataTradeList/DataTradeList';
-import './CardList.css';
-import DataNavbar from '../../components/DataNavbar/DataNavbar';
+import './CardListTag.css';
+import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
+import UserNavbar from '../../components/UserNavbar/UserNavbar';
 
-function CardList({ listTitle }) {
+function CardListTag({ listTitle }) {
     // 임시 데이터로 상태 초기화
     const [cards] = useState([
       {
@@ -16,6 +16,7 @@ function CardList({ listTitle }) {
         title: '카드 제목 1',
         description: '설명 1',
         limit: '제한 1',
+        tag: '참여중'
       },
       {
         id: 2,
@@ -23,6 +24,7 @@ function CardList({ listTitle }) {
         title: '카드 제목 2',
         description: '설명 2',
         limit: '제한 2',
+        tag: '거절'
       },
       {
         id: 3,
@@ -30,6 +32,7 @@ function CardList({ listTitle }) {
         title: '카드 제목 3',
         description: '설명 3',
         limit: '제한 3',
+        tag: '승인'
       },
       // 추가 카드 데이터...
     ]);
@@ -53,7 +56,7 @@ function CardList({ listTitle }) {
 
   return (
     <>
-      <DataTradeList listTitle="데이터 거래 목록" />
+      <BackDataTradeList listTitle="내가 쓴 글" />
       <div className="card-list">
         {cards.map((card, index) => (
           <Link key={index} to={`/detail/${card.id}`}>  {/* id 값을 URL에 포함 */}
@@ -61,14 +64,15 @@ function CardList({ listTitle }) {
               image={card.image} 
               title={card.title} 
               description={card.description} 
-              limit={card.limit} 
+              limit={card.limit}
+              tag={card.tag}
             />
           </Link>
         ))}
       </div>
-      <DataNavbar />
+      <UserNavbar />
     </>
   );
 }
 
-export default CardList;
+export default CardListTag;

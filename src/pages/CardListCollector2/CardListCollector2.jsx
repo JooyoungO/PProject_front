@@ -2,34 +2,28 @@ import React, { useState } from 'react'; //api 받아오면 삭제하기
 // import React, { useEffect, useState } from 'react'; //api 받아오면 주석 풀기
 import { Link } from 'react-router-dom';
 // import axios from 'axios';  //api 받아오면 주석 풀기
-import Card from '../../components/Card/Card';
-import DataTradeList from '../../components/DataTradeList/DataTradeList';
-import './CardList.css';
+import Card2 from '../../components/Card2/Card2';
+import './CardListCollector2.css';
+import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
 import DataNavbar from '../../components/DataNavbar/DataNavbar';
 
-function CardList({ listTitle }) {
+function CardListCollector2({ listTitle }) {
     // 임시 데이터로 상태 초기화
     const [cards] = useState([
       {
         id: 1,
         image: 'https://via.placeholder.com/150',
-        title: '카드 제목 1',
-        description: '설명 1',
-        limit: '제한 1',
+        tag: '대기'
       },
       {
         id: 2,
         image: 'https://via.placeholder.com/150',
-        title: '카드 제목 2',
-        description: '설명 2',
-        limit: '제한 2',
+        tag: '승인'
       },
       {
         id: 3,
         image: 'https://via.placeholder.com/150',
-        title: '카드 제목 3',
-        description: '설명 3',
-        limit: '제한 3',
+        tag: '승인'
       },
       // 추가 카드 데이터...
     ]);
@@ -53,15 +47,13 @@ function CardList({ listTitle }) {
 
   return (
     <>
-      <DataTradeList listTitle="데이터 거래 목록" />
+      <BackDataTradeList listTitle="데이터 수집 목록" />
       <div className="card-list">
         {cards.map((card, index) => (
           <Link key={index} to={`/detail/${card.id}`}>  {/* id 값을 URL에 포함 */}
-            <Card 
-              image={card.image} 
-              title={card.title} 
-              description={card.description} 
-              limit={card.limit} 
+            <Card2 
+              image={card.image}
+              tag={card.tag}
             />
           </Link>
         ))}
@@ -71,4 +63,4 @@ function CardList({ listTitle }) {
   );
 }
 
-export default CardList;
+export default CardListCollector2;

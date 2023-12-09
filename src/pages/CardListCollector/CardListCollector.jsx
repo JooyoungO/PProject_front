@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 // import axios from 'axios';  //api 받아오면 주석 풀기
 import Card from '../../components/Card/Card';
 import DataTradeList from '../../components/DataTradeList/DataTradeList';
-import './CardList.css';
+import './CardListCollector.css';
 import DataNavbar from '../../components/DataNavbar/DataNavbar';
+import plus from '../../images/plus.svg';
 
-function CardList({ listTitle }) {
+function CardListCollector({ listTitle }) {
     // 임시 데이터로 상태 초기화
     const [cards] = useState([
       {
@@ -66,9 +67,12 @@ function CardList({ listTitle }) {
           </Link>
         ))}
       </div>
+      <div className='plusbutton'>
+          <img src={plus} alt='plus' />
+      </div>
       <DataNavbar />
     </>
   );
 }
 
-export default CardList;
+export default CardListCollector;

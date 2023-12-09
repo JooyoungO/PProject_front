@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./RewardDeposit.css";
+import PointNavbar from '../../components/PointNavbar/PointNavbar';
+import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
 
 function RewardDeposit() {
   const [model] = useState({
@@ -21,13 +23,15 @@ function RewardDeposit() {
   }
 
   return (
+    <>
+    <BackDataTradeList listTitle={"입금"} />
     <div className="RewardDeposit" style={{ position: "relative" }}>
       {/* 상단바가 들어오면 margin 값을 변경해줘야 함 
                 상단바와 '결제 정보' 간격은 32px */}
       <p
         style={{
           color: "black",
-          margin: "120px 16px 16px 16px",
+          margin: "32px 16px 16px 16px",
           fontSize: "16px",
         }}
       >
@@ -103,6 +107,8 @@ function RewardDeposit() {
       </p>
       <div className={`nextbutton ${isAmountInputVisible ? 'blue' : ''}`} onClick={onNextClickHandler}>다음</div>
     </div>
+    <PointNavbar />
+    </>
   );
 }
 
