@@ -3,7 +3,7 @@
     height: 844px;
     margin: 0 auto;
     position: relative;
-    font-family: 'SOYOMapleRegular';
+    font-family: SOYOMapleRegular;
     align-items: center;
 }
 
@@ -19,4 +19,11 @@
     padding-top: 7px;
     margin: 16px 16px 0; /* 수정된 부분: 위쪽 마진을 추가하고 bottom 제거 */
     text-decoration: none;
+    font-family: SOYOMapleRegular;
+}
+
+@font-face {
+    font-family: 'SOYOMapleRegular';
+    font-weight: normal;
+    src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
 }

@@ -41,3 +41,9 @@
 .card-tag.daegi {
   background-color: #A5A5A5; /* 회색 */
 }
+
+@font-face {
+  font-family: 'SOYOMapleRegular';
+  font-weight: normal;
+  src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
+}

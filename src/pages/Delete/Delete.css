@@ -1,4 +1,4 @@
-.data-submission-container {
+.delete-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,8 +13,19 @@
     font-family: SOYOMapleRegular;
   }
   
-  .image-upload-section {
-    border: 2px dashed blue; /* 이 부분은 디자인에 맞게 색상을 조정하세요. */
+  .image-container {
+    width: 358px;
+    text-align: center;
+    margin-bottom: 35px;
+    font-family: SOYOMapleRegular;
+  }
+  
+  .uploaded-image {
+    width: 358px;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px dashed blue; 
     border-radius: 8px;
     text-align: center;
     margin-bottom: 35px;
@@ -26,52 +37,42 @@
     font-family: SOYOMapleRegular;
   }
   
-  .upload-placeholder {
-    color: #214FC7; 
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 28%;
+  .view-button, .delete-button {
+    width: 358px;
+    padding: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 5px; 
     font-family: SOYOMapleRegular;
   }
   
-  .description-input {
+  .view-button {
+    background-color: #FFF;
+    color: #214FC7;
+    border: 1px solid #214FC7;
+    margin-top: 3px;
+    font-family: SOYOMapleRegular;
+  }
+  
+  .delete-button {
+    background-color: #C12A2A;
+    color: white;
+    border: none;
+    font-family: SOYOMapleRegular;
+  }
+  
+  .description {
     width: 358px;
     height: 250px;
     margin-left: 2px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    margin-bottom: 20px;
-    resize: none; /* 사용자가 텍스트 영역의 크기를 조절하지 못하도록 합니다. */
+    margin-bottom: 5px;
+    resize: none; /* 사용자가 텍스트 영역의 크기를 조절하지 못하도록 함 */
+    color: black;
+    text-align: left;
     font-family: SOYOMapleRegular;
   }
-  
-  .Next-button button {
-    width: 358px;
-    height: 53px;
-    margin-left: 4px;
-    padding: 1rem;
-    background-color: #214FC7;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-bottom: 100px;
-    font-family: SOYOMapleRegular;
-  }
-  
-  .submission-form textarea{
-    color:#A5A5A5;
-    font-family: SOYOMapleRegular;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-  }
-  
-
   @font-face {
     font-family: 'SOYOMapleRegular';
     font-weight: normal;

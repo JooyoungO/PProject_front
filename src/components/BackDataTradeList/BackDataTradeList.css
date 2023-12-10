@@ -10,6 +10,7 @@
     text-align: center;
     margin-top: 13px;
     margin-bottom: 0px;
+    font-family: SOYOMapleRegular;
   }
   
   .data-trade-list-title {
@@ -18,9 +19,17 @@
     font-weight: bold;
     margin: 0; /* 기본 마진 제거 */
     flex-grow: 1;
+    font-family: SOYOMapleRegular;
   }
   
   .data-trade-list-container img {
     position: absolute;
     left: 8px; /* 왼쪽 여백 */
+    font-family: SOYOMapleRegular;
   }
+
+  @font-face {
+    font-family: 'SOYOMapleRegular';
+    font-weight: normal;
+    src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
+}

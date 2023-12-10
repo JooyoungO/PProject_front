@@ -4,10 +4,12 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    font-family: SOYOMapleRegular;
   }
   
   .signup-type-logo {
     margin-bottom: 40px;
+    
   }
   
   h2 {
@@ -16,6 +18,7 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
+    font-family: SOYOMapleRegular;
   }
   
   .signup-type-options {
@@ -23,6 +26,7 @@
     justify-content: space-around;
     width: 390px;
     margin-bottom: 35px;
+    font-family: SOYOMapleRegular;
   }
   
   .signup-type-option {
@@ -34,11 +38,12 @@
     padding: 17px; 
     background-color: #fff; 
     border-radius: 12px;
+    font-family: SOYOMapleRegular;
   }
 
   .signup-type-option span {
     text-align: center;
-    font-family: Pretendard;
+    font-family: SOYOMapleRegular;
     font-size: 16px;
     font-weight: 700;
     line-height: normal;
@@ -59,6 +64,7 @@
     font-size: 1rem;
     cursor: pointer;
     margin-bottom: 12px;
+    font-family: SOYOMapleRegular;
   }
 
   .Back-button button {
@@ -72,4 +78,11 @@
     cursor: pointer;
     border: 1px solid;
     border-color: #214FC7;
+    font-family: SOYOMapleRegular;
   }
+
+  @font-face {
+    font-family: 'SOYOMapleRegular';
+    font-weight: normal;
+    src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
+}

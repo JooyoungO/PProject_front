@@ -9,6 +9,7 @@
   margin: 0 auto; /* 화면을 중앙에 배치 */
   position: relative; /* 포지셔닝 컨텍스트를 지정 */
   justify-content: space-between; /* 위, 아래 여백을 동일하게 조정 */
+  font-family: SOYOMapleRegular;
 }
 
 .image-upload-section {
@@ -21,6 +22,7 @@
   height: 250px;
   margin-left: 4px;
   margin-top: 20px;
+  font-family: SOYOMapleRegular;
 }
 
 .upload-placeholder {
@@ -31,7 +33,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 28%;
-  font-family: Pretendard;
+  font-family: SOYOMapleRegular;
 }
 
 .description-input {
@@ -42,6 +44,7 @@
   border-radius: 8px;
   margin-bottom: 20px;
   resize: none; /* 사용자가 텍스트 영역의 크기를 조절하지 못하도록 합니다. */
+  font-family: SOYOMapleRegular;
 }
 
 .Next-button button {
@@ -56,12 +59,19 @@
   font-size: 1rem;
   cursor: pointer;
   margin-bottom: 100px;
+  font-family: SOYOMapleRegular;
 }
 
 .submission-form textarea{
   color:#A5A5A5;
-  font-family: Pretendard;
+  font-family: SOYOMapleRegular;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
+}
+
+@font-face {
+  font-family: 'SOYOMapleRegular';
+  font-weight: normal;
+  src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
 }

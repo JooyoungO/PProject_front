@@ -8,13 +8,14 @@
   position: fixed; /* 고정 위치 */
   bottom: 0; /* 하단에 배치 */
   left: 0; /* 왼쪽에 배치 */
+  font-family: SOYOMapleRegular;
 }
 
 .nav-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: Pretendard;
+  font-family: SOYOMapleRegular;
   font-weight: 500;
   font-size: 12px;
 }
@@ -23,8 +24,16 @@
   width: 24px; 
   height: 24px; 
   margin-bottom: 4px; 
+  font-family: SOYOMapleRegular;
 }
 
 .text-gray span {
   color: #A5A5A5;
+  font-family: SOYOMapleRegular;
+}
+
+@font-face {
+  font-family: 'SOYOMapleRegular';
+  font-weight: normal;
+  src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
 }

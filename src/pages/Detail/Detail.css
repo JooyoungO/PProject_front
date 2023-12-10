@@ -1,25 +1,28 @@
 .Detail-wrapper {
     width: 390px;
-    height: 844px;
     margin: 0 auto;
     position: relative;
-    text-align: center;
     font-family: SOYOMapleRegular;
-
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 56px); 
+    overflow-y: auto; /* 스크롤 가능하도록 설정 */
+    padding-bottom: 56px; /* .footer-button 높이 + .nav-bar 높이 */
 }
 
 .Detail-image img{
     width: 390px;
     height: 390px;
     vertical-align: middle;
+    font-family: SOYOMapleRegular;
 }
 
 .Detail-title {
     position: absolute;
     top: 30%;
-    flex-shrink: 0;
-    width: 358px;
-    margin: 16px;
+    left: 3%;
+    width: 100%;
+    /* transform: translate(-50%, -50%); */
     text-align: left;
     color: white;
     font-family: SOYOMapleRegular;
@@ -31,7 +34,7 @@
 }
 
 .Detail-condition {
-    width: 358px;
+    width: 390px;
     height: 95px;
     flex-shrink: 0;
     background-color: #EFEFEF;
@@ -39,29 +42,32 @@
     align-content: center;
     padding-top: 1%;
     padding-bottom: 16px;
-    margin: 16px;
+    font-family: SOYOMapleRegular;
 }
 
 .footer-button {
-    position: fixed;
-    width: 358px;
+    width: 390px;
     height: 34px;
     border-radius: 12px;
     background: #214FC7;
     color: #FFFFFF;
-    margin: 16px;
     text-align: center;
-    padding-top: 7px; 
+    padding-top: 13px; /* 버튼 내부 콘텐츠가 중앙에 오도록 조정 */
+    margin-bottom: 10px; /* .nav-bar와의 간격을 위해 조정 */
+    font-family: SOYOMapleRegular;
+
 }
 
 .Detail-user {
     display: flex;
     justify-content: space-between;
     padding: 13px;
+    font-family: SOYOMapleRegular;
 }
 
 .Detail-user p {
     margin-top: 10px; /* 기본 마진 제거 */
+    font-family: SOYOMapleRegular;
 }
 
 @font-face {

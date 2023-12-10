@@ -3,7 +3,7 @@
     height: 844px;
     margin: 0 auto;
     position: relative;
-    font-family: 'SOYOMapleRegular';
+    font-family: SOYOMapleRegular;
 }
 
 .DepositButton {
@@ -17,5 +17,12 @@
     padding-top: 7px;
     margin: 16px;
     bottom: 16px;
+    font-family: SOYOMapleRegular;
 
+}
+
+@font-face {
+    font-family: 'SOYOMapleRegular';
+    font-weight: normal;
+    src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
 }

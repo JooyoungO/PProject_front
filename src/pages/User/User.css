@@ -3,13 +3,14 @@
     height: 844px;
     margin: 0 auto;
     position: relative;
-    font-family: 'SOYOMapleRegular';
+    font-family: SOYOMapleRegular;
 }
 
 .user-menu {
     width: 358px;
     height: fit-content;
     margin: 24px 16px 16px;
+    font-family: SOYOMapleRegular;
 
 }
 
@@ -20,4 +21,11 @@
     word-wrap: 'break-word';
     border-bottom: 1px solid #EFEFEF;
     font-weight: bold;
+    font-family: SOYOMapleRegular;
+}
+
+@font-face {
+    font-family: 'SOYOMapleRegular';
+    font-weight: normal;
+    src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
 }

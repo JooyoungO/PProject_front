@@ -59,6 +59,8 @@ import Reward2 from './pages/Reward2/Reward2';
 import RewardDeposit from './pages/RewardDeposit/RewardDeposit';
 import RewardSend from './pages/RewardSend/RewardSend';
 import User from './pages/User/User';
+import BackDataTradeList from './components/BackDataTradeList/BackDataTradeList';
+import Delete from './pages/Delete/Delete';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

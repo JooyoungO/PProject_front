@@ -3,7 +3,7 @@
     height: 844px;
     margin: 0 auto;
     position: relative;
-    font-family: 'SOYOMapleRegular';
+    font-family: SOYOMapleRegular;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,6 +16,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    font-family: SOYOMapleRegular;
 }
 
 .checkButton {
@@ -29,8 +30,16 @@
     text-align: center;
     padding-top: 13px; 
     bottom: 16px;
+    font-family: SOYOMapleRegular;
 }
 
 p {
     margin : 0px;
+    font-family: SOYOMapleRegular;
+}
+
+@font-face {
+    font-family: 'SOYOMapleRegular';
+    font-weight: normal;
+    src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
 }

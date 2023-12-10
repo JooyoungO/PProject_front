@@ -9,14 +9,23 @@
   background-color: #f8f8f8;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
   padding: 12px;
+  font-family: SOYOMapleRegular;
 }
 
 .nav-icon {
   text-align: center;
+  font-family: SOYOMapleRegular;
 }
 
 .nav-label {
   font-size: 12px;
   color: #333333;
   margin-top: 4px;
+  font-family: SOYOMapleRegular;
+}
+
+@font-face {
+  font-family: 'SOYOMapleRegular';
+  font-weight: normal;
+  src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
 }
