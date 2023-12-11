@@ -65,7 +65,7 @@ import Delete from './pages/Delete/Delete';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <User /> 
+    <RewardSend /> 
   </BrowserRouter>
 );
 

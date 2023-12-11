@@ -26,7 +26,7 @@ function Reward2({listTitle}) {
         <DataTradeList listTitle={"잔액"} />
         <div className='reward'>
             <p style={{ 
-                color: 'black', margin:'16px 0px 0px 16px', fontSize:'16px', fontSize:'16px'}}>당신의 리워드는</p>
+                color: 'black', margin:'16px 0px 0px 16px', fontSize:'16px', fontSize:'16px'}}>당신의 잔액은</p>
             <p style={{margin:'6px 16px', fontSize:'32px'}}><b>{model ? model.myReward : "Loading..."} </b></p>
             <p style={{margin:'6px 16px', fontSize:'16px'}}>입니다.</p>
             <div className='DepositButton' onClick={onSendClickHandler}>입금하기</div>
