@@ -44,7 +44,7 @@ function RewardDeposit() {
           fontWeight: "bolder",
         }}
       >
-        내 지갑 ({model ? model.mywallet : "Loading..."})
+        내 지갑 ({model ? model.mywallet : "Loading..."}) 에서
       </p>
       <p
         style={{

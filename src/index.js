@@ -61,11 +61,12 @@ import RewardSend from './pages/RewardSend/RewardSend';
 import User from './pages/User/User';
 import BackDataTradeList from './components/BackDataTradeList/BackDataTradeList';
 import Delete from './pages/Delete/Delete';
+import AccountDeletion from './pages/AccountDeletion/AccountDeletion';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <RewardSend /> 
+    <RewardDeposit /> 
   </BrowserRouter>
 );
 

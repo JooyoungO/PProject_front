@@ -42,7 +42,7 @@ function RewardSend() {
           fontWeight: "bolder",
         }}
       >
-        데이터뱅크 ({model ? model.databank : "Loading..."})
+        데이터뱅크 ({model ? model.databank : "Loading..."}) 가
       </p>
       <p
         style={{
