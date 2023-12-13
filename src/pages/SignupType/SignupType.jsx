@@ -36,6 +36,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SignupType.css';
+import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
 import DATABANK from '../../images/DATABANK.svg';
 import Messages from '../../images/Messages.svg';
 import Profile from '../../images/Profile.svg';
@@ -62,6 +63,7 @@ function SignupType() {
 
   return (
     <div className="signup-type-container">
+      <BackDataTradeList />
       <div className="signup-type-logo">
          <img src={DATABANK} alt="DATABANK Logo" />
        </div>

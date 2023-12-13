@@ -16,6 +16,7 @@
     bottom: 15%; /* 아래 여백 조정 */
     right: 16px;
     font-family: SOYOMapleRegular;
+    cursor: pointer;
 
 }
 

@@ -1,3 +1,4 @@
+//데이터 수집자의 사용자 페이지
 import React, { useState } from "react";
 import "./User2.css";
 import UserNavbar from "../../components/UserNavbar/UserNavbar";

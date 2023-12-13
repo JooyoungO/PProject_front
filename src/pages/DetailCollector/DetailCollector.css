@@ -1,6 +1,6 @@
 .Detail-wrapper {
     width: 390px;
-    height: 844px;
+    /* height: 844px; */
     margin: 0 auto;
     position: relative;
     text-align: center;
@@ -45,7 +45,7 @@
 }
 
 .footer-button {
-    position: fixed;
+    /* position: fixed; */
     width: 358px;
     height: 34px;
     bottom: 100px;  /* 버튼위치 조정 */
