@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';  // react-router-dom에서 Link 가져오기
 import Trading from '../../components/Trading/Trading';
+import { useNavigate } from 'react-router-dom';
 import './Reward.css';
-import cat from "../../images/cat.png";
-import Button from '../../components/Button/Button';
 import DataTradeList from '../../components/DataTradeList/DataTradeList';
-import PointNavBar from '../../components/PointNavbar/PointNavbar';
+import RewardNavbar from '../../components/RewardNavbar/RewardNavbar';
 
-
-
-function Reward({listTitle}) {
-
+function Reward() {
+    const navigate = useNavigate();
     const [model] = useState({
         myReward: '본인이 가진 리워드',
         image: 'https://via.placeholder.com/150',
@@ -20,19 +16,20 @@ function Reward({listTitle}) {
         balance: '잔액'
     });
 
-    function onSendClickHandler() {
-        window.location.href='./RewardSend.jsx';
-    }
+    const handleTransferClick = () => {
+        navigate('/RewardSend'); // RewardSend 컴포넌트로 이동
+    };
 
     return (
         <>
         <DataTradeList listTitle={"리워드"} />
         <div className='reward'>
             <p style={{ 
-                color: 'black', margin:'60px 0px 0px 16px', fontSize:'16px', fontSize:'16px'}}>당신의 리워드는</p>
+                color: 'black', margin:'60px 0px 0px 16px', fontSize:'16px'}}>당신의 리워드는</p>
             <p style={{margin:'6px 16px', fontSize:'32px'}}><b>{model ? model.myReward : "Loading..."} </b></p>
             <p style={{margin:'6px 16px', fontSize:'16px'}}>입니다.</p>
-            <Link to="/RewardSend" className='SendButton'><b>이체하기</b></Link>
+            {/** 버튼 컴포넌트 들어올 자리, 지금은 만든게 없어서 대체 */}
+            <div className='reward-button' onClick={handleTransferClick}><b>이체하기</b></div>
             <p style={{color:'#A5A5A5', marginLeft:'16px'}}>거래내역</p>
             <Trading
             image src={model ? model.image : "defaul_image.png"} 
@@ -63,8 +60,8 @@ function Reward({listTitle}) {
             balance= {model ? model.balance : "Loading..."}
             />
         </div>
-        <PointNavBar />
-    </>
+        <RewardNavbar />
+        </>
     )
 }
 

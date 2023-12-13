@@ -2,9 +2,10 @@
 //import { useParams } from 'react-router-dom';
 // import axios from 'axios'; //*api 불러오면 주석해제
 import React, { useState } from 'react'; //api 불러오면 삭제
-import './Detail.css';
-import DataNavbar from '../../components/DataNavbar/DataNavbar';
+import { useNavigate } from 'react-router-dom';
+import DataNavbar2 from '../../components/DataNavbar2/DataNavbar2';
 import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
+import './Detail.css';
 
 function Detail() {
     // 임시 데이터로 상태 초기화
@@ -12,19 +13,25 @@ function Detail() {
         image: 'https://via.placeholder.com/150',
         title: '임시 제목',
         userName: '사용자 이름',
-        participantCount: '참여인원',
-        reward: '리워드',
+        participantCount: '100',
+        reward: '50',
         conditions: ['고양이 전신 사진이 촬영되어야 합니다.'],
         description: '😎 안녕하세요. 저희는 고양이 전신 사진을 100장 정도 확보하는 것을 목표로 하고 있습니다...',
     });
 
+    const navigate = useNavigate();
+
+    const handleParticipate = () => {
+        navigate('/DataSubmission'); // DataSubmission 페이지로 이동
+    };
+    
 // function Detail() {
 //     const [model, setModel] = useState(null);
 //     const { id } = useParams();
 
 //     useEffect(() => {
 //         const fetchData = async () => {
-//             const token = "test";
+//             const token = "test"
 //             try {
 //                 const res = await axios.get(`http://172.16.228.187:8080/collects/${id}`, {  // id를 사용하는 URL
 //                     headers: {
@@ -45,9 +52,8 @@ function Detail() {
 //     }, [id]);   //*api 불러오면 주석해제
 
     return (
-        <>
-        <BackDataTradeList />
         <div className='Detail-wrapper'>
+            <BackDataTradeList listTitle="데이터 수집 상세" />
             <div className='Detail-image'>
                 <img src={model ? model.image : 'default_image.png'} alt={model ? model.title : 'Loading...'} />
             </div>
@@ -74,11 +80,9 @@ function Detail() {
                     {model ? model.description : 'Loading...'}
                 </p>
             </div>
-
-            <div className='footer-button'>참여하기</div>
+            <div className='footer-button' onClick={handleParticipate}>참여하기</div>
+            <DataNavbar2 />
         </div>
-        <DataNavbar />
-        </>
     );
 }
 

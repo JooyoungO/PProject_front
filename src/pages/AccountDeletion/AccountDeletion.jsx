@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
-import UserNavbar from '../../components/UserNavbar/UserNavbar';
+import UserNavbar2 from '../../components/UserNavbar2/UserNavbar2';
 import './AccountDeletion.css'; 
-import { useNavigate } from 'react-router-dom';
 
 function AccountDeletion() {
-
-  const navigate = useNavigate();
-
   const [isConfirmed, setIsConfirmed] = useState(false);
 
   const handleCheckboxChange = (event) => {
@@ -18,7 +14,6 @@ function AccountDeletion() {
     if (isConfirmed) {
       // 탈퇴 로직을 수행 -> API 호출 
       console.log('계정 탈퇴가 확인되었습니다.');
-      navigate('/Login')
     } else {
       alert('탈퇴를 확인해주세요.');
     }
@@ -43,7 +38,7 @@ function AccountDeletion() {
       <button onClick={handleDeletionConfirm} className="deletion-button">
         탈퇴
       </button>
-      <UserNavbar />
+      <UserNavbar2 />
     </div>
   );
 }

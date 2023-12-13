@@ -8,13 +8,13 @@
     height: calc(100vh - 56px); 
     overflow-y: auto; /* 스크롤 가능하도록 설정 */
     padding-bottom: 56px; /* .footer-button 높이 + .nav-bar 높이 */
+    /* margin-top: 70px; */
 }
 
 .Detail-image img{
     width: 390px;
     height: 390px;
     vertical-align: middle;
-    font-family: SOYOMapleRegular;
 }
 
 .Detail-title {
@@ -42,7 +42,6 @@
     align-content: center;
     padding-top: 1%;
     padding-bottom: 16px;
-    font-family: SOYOMapleRegular;
 }
 
 .footer-button {
@@ -52,22 +51,18 @@
     background: #214FC7;
     color: #FFFFFF;
     text-align: center;
-    padding-top: 13px; /* 버튼 내부 콘텐츠가 중앙에 오도록 조정 */
-    margin-bottom: 10px; /* .nav-bar와의 간격을 위해 조정 */
-    font-family: SOYOMapleRegular;
-
+    padding-top: 13px;
+    margin-bottom: 10px; 
 }
 
 .Detail-user {
     display: flex;
     justify-content: space-between;
     padding: 13px;
-    font-family: SOYOMapleRegular;
 }
 
 .Detail-user p {
     margin-top: 10px; /* 기본 마진 제거 */
-    font-family: SOYOMapleRegular;
 }
 
 @font-face {

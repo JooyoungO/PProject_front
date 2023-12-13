@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Card from '../../components/Card/Card';
 import DataTradeList from '../../components/DataTradeList/DataTradeList';
 import './CardList.css';
-import DataNavbar from '../../components/DataNavbar/DataNavbar';
+import DataNavbar2 from '../../components/DataNavbar2/DataNavbar2';
 
 function CardList({ listTitle }) {
     // 임시 데이터로 상태 초기화
@@ -66,7 +66,7 @@ function CardList({ listTitle }) {
           </Link>
         ))}
       </div>
-      <DataNavbar />
+      <DataNavbar2 />
     </>
   );
 }

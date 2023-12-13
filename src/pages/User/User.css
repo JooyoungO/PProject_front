@@ -3,14 +3,16 @@
     height: 844px;
     margin: 0 auto;
     position: relative;
-    font-family: SOYOMapleRegular;
+    font-family: 'SOYOMapleRegular';
+    /* background-color: bisque; */
+    margin: 0 auto; /* 화면을 중앙에 배치 */
+    position: relative; /* 포지셔닝 컨텍스트를 지정 */
 }
 
 .user-menu {
     width: 358px;
     height: fit-content;
     margin: 24px 16px 16px;
-    font-family: SOYOMapleRegular;
 
 }
 
@@ -21,7 +23,7 @@
     word-wrap: 'break-word';
     border-bottom: 1px solid #EFEFEF;
     font-weight: bold;
-    font-family: SOYOMapleRegular;
+    cursor: pointer; /*추가함*/
 }
 
 @font-face {

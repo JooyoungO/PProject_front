@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Trading from '../../components/Trading/Trading';
 import './Reward2.css';
-import cat from "../../images/cat.png";
 import DataTradeList from '../../components/DataTradeList/DataTradeList';
 import PointNavbar from '../../components/PointNavbar/PointNavbar';
 import { useNavigate } from 'react-router-dom';
