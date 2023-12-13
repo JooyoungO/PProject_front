@@ -7,8 +7,12 @@
   background: #FFF;
   bottom: 0;
   z-index: 1000;
-  margin-top: 13px;
+  /* margin-top: 13px; */
+  margin: 0px;
   font-family: SOYOMapleRegular;
+  position:fixed;
+  overflow-y: auto;
+  text-decoration: none;
 }
 
 .nav-item {
@@ -18,6 +22,7 @@
   font-family: SOYOMapleRegular;
   font-weight: 500;
   font-size: 12px;
+  text-decoration: none;
 }
 
 .nav-icon {
@@ -25,11 +30,13 @@
   height: 24px; 
   margin-bottom: 4px; 
   font-family: SOYOMapleRegular;
+  text-decoration: none;
 }
 
 .text-gray span {
   color: #A5A5A5;
   font-family: SOYOMapleRegular;
+  text-decoration: none;
 }
 
 @font-face {

@@ -4,9 +4,12 @@ import './Reward2.css';
 import cat from "../../images/cat.png";
 import DataTradeList from '../../components/DataTradeList/DataTradeList';
 import PointNavbar from '../../components/PointNavbar/PointNavbar';
+import { useNavigate } from 'react-router-dom';
 
 
 function Reward2({listTitle}) {
+
+    const navigate = useNavigate();
 
     const [model] = useState({
         myReward: '본인이 가진 리워드',
@@ -18,7 +21,7 @@ function Reward2({listTitle}) {
     });
 
     function onSendClickHandler() {
-        console.log('이체하기 버튼을 눌렀어요')
+        navigate('/RewardDeposit');
     }
 
     return (

@@ -1,6 +1,6 @@
 .DepositSuccess {
     width: 390px;
-    height: 844px;
+    height: 644px;
     margin: 0 auto;
     position: relative;
     font-family: SOYOMapleRegular;
@@ -27,9 +27,9 @@
     background: #214FC7;
     color: #FFFFFF;
     margin: 16px;
+    bottom: 100px;
     text-align: center;
     padding-top: 13px; 
-    bottom: 16px;
     font-family: SOYOMapleRegular;
 }
 

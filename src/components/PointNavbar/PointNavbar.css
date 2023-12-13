@@ -8,6 +8,7 @@
   position: fixed; /* 고정 위치 */
   bottom: 0; /* 하단에 배치 */
   font-family: SOYOMapleRegular;
+  text-decoration: none;
 }
 
 .nav-item {
@@ -17,6 +18,7 @@
   font-family: SOYOMapleRegular;
   font-weight: 500;
   font-size: 12px;
+  text-decoration: none;
 }
 
 .nav-icon {
@@ -24,15 +26,21 @@
   height: 24px; 
   margin-bottom: 4px; 
   font-family: SOYOMapleRegular;
+  text-decoration: none;
 }
 
 .text-gray span {
   color: #A5A5A5;
   font-family: SOYOMapleRegular;
+  text-decoration: none;
 }
 
 @font-face {
   font-family: 'SOYOMapleRegular';
   font-weight: normal;
   src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
+}
+
+.span {
+  text-decoration: none;
 }
