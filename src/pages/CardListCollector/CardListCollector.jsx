@@ -51,7 +51,7 @@ function CardListCollector({ listTitle }) {
       try {
         const response = await axios.get('/collects', {
           headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0QG5hdmVyLmNvbSIsImF1dGgiOiJDT0xMRUNUT1IiLCJleHAiOjE3MDI1MzE5NDV9.IkEL_khs4e9ZlZqzQVE6pdWvGAMOaOkDp8tdbRPhIXc6S3glVFWlEKUhYqkt_BrElpCjDhZFaRXxGwrrNRFNQQ',
+            'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0QG5hdmVyLmNvbSIsImF1dGgiOiJDT0xMRUNUT1IiLCJleHAiOjE3MDI1NDA0MDN9.lHR0e6pjnObR7MXl3wzjcVK9OAJ99XDkzTHuZLHSY8kVkM9g6V1Egj6KydSNaB6Iu0YijrLQLqYRWRzkNZs6XQ',
           },
         });  // API 엔드포인트로 변경하세요
         setCards(response.data);  // API 응답으로 받은 데이터로 상태 업데이트
@@ -72,8 +72,7 @@ function CardListCollector({ listTitle }) {
           <Link key={index} to={`/DetailCollector/${card.id}`}>  {/* id 값을 URL에 포함 */}
             <Card 
               image={card.imageUrl} 
-              title={card.title} 
-              description={card.description} 
+              title={card.title}
               limit={card.capacity} 
             />
           </Link>
