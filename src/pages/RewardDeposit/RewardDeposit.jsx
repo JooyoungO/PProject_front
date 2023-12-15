@@ -2,50 +2,23 @@ import React, { useState } from "react";
 import "./RewardDeposit.css";
 import PointNavbar from "../../components/PointNavbar/PointNavbar";
 import BackDataTradeList from "../../components/BackDataTradeList/BackDataTradeList";
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
 
 function RewardDeposit() {
-
   const navigate = useNavigate();
 
   const [model] = useState({
-    databank: "이상한 hex형",
-    mywallet: "얘도 이상한 hex형",
-    currentbalance: "얼만큼 있는지",
+    databank: "0x4183...",
+    mywallet: "0x92Ac...",
+    currentbalance: "2500",
   });
 
   const [amount, setAmount] = useState("");
   const [isAmountInputVisible, setIsAmountInputVisible] = useState(false);
 
-  const onNextClickHandler = async () => {
-
-    // 데이터 수집자가 리워드를 입금시킬때 사용하는 요청입니다.
-    // amount : 얼마를 입금하는지 값 가져오기
-    const amount = {amount};
-    const endpoint = "/reward/deposit?amount=" + amount;
-    try {
-      const token = "";
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + token,
-        },
-      });
-      if (response.ok) {
-        const data = await response.json();
-        console.log(data);
-        // 데이터로 반환되는 건 없음
-        // response SUCCESS면 입금이 된 것
-      } else {
-        console.error("실패:", response);
-      }
-    } catch (error) {
-      console.error("API 호출 중 오류 발생:", error);
-    }
-    navigate('/DepositSuccess')
-  };
+  function onNextClickHandler() {
+    navigate("/DepositSuccess");
+  }
 
   function onAmountInputChangeHandler(e) {
     setAmount(e.target.value);
