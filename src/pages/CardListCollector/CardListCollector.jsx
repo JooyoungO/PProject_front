@@ -51,7 +51,7 @@ function CardListCollector({ listTitle }) {
       try {
         const response = await axios.get('/collects', {
           headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0QG5hdmVyLmNvbSIsImF1dGgiOiJDT0xMRUNUT1IiLCJleHAiOjE3MDI1NDA0MDN9.lHR0e6pjnObR7MXl3wzjcVK9OAJ99XDkzTHuZLHSY8kVkM9g6V1Egj6KydSNaB6Iu0YijrLQLqYRWRzkNZs6XQ',
+            'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjb2xsZWN0QG5hdmVyLmNvbSIsImF1dGgiOiJPRkZFUiIsImV4cCI6MTcwMjU3OTQ3NX0.XeBJ27oxE34xbotGZkLXBvgdtpU0Fr-vME9-RK5NsZNFPFNvHAmeIIfQtCgZ2ipKz5NmFI7BThjcFZSKMzT_1w',
           },
         });  // API 엔드포인트로 변경하세요
         setCards(response.data);  // API 응답으로 받은 데이터로 상태 업데이트
