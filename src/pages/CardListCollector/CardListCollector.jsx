@@ -44,20 +44,31 @@ function CardListCollector({ listTitle }) {
     // ]);
 
 // function CardList({ listTitle }) {
-  const [cards, setCards] = useState([]);  // 카드 데이터를 상태로 관리
+  const [cards, setCards] = useState([]);
+  const endpoint = "/collects";
 
   useEffect(() => {
     const fetchCards = async () => {
       try {
-        const response = await axios.get('/collects', {
+        const response = await fetch(endpoint, {
+          method: "GET",
           headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjb2xsZWN0QG5hdmVyLmNvbSIsImF1dGgiOiJPRkZFUiIsImV4cCI6MTcwMjU3OTQ3NX0.XeBJ27oxE34xbotGZkLXBvgdtpU0Fr-vME9-RK5NsZNFPFNvHAmeIIfQtCgZ2ipKz5NmFI7BThjcFZSKMzT_1w',
+            "Content-Type": "application/json",
+            'Authorization': 'Bearer ' + window.sessionStorage.getItem('token'),
           },
-        });  // API 엔드포인트로 변경하세요
-        setCards(response.data);  // API 응답으로 받은 데이터로 상태 업데이트
+        });  
+        if (response.ok) {
+          const data = await response.json();
+          setCards(data);
+
+          console.log("성공:", data);
+        } else {
+          const errorText = await response.text();
+          alert(`실패: ${errorText}`);
+        }  
       } catch (error) {
-        console.error('Error fetching cards:', error);
-        // 에러 처리 로직
+        alert("오류가 발생했습니다.");
+        console.error('API 호출 중 오류 발생:', error);
       }
     };
 
@@ -69,10 +80,14 @@ function CardListCollector({ listTitle }) {
       <DataTradeList listTitle="데이터 거래 목록" />
       <div className="card-list">
         {cards.map((card, index) => (
-          <Link key={index} to={`/DetailCollector/${card.id}`}>  {/* id 값을 URL에 포함 */}
+          <Link key={index} to={`/DetailCollector/${card.id}`}>  
+            {" "}
+            {/* id 값을 URL에 포함 */}
             <Card 
+              id = {card.id}
               image={card.imageUrl} 
               title={card.title}
+              description={card.userName}
               limit={card.capacity} 
             />
           </Link>
