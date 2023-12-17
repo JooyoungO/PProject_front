@@ -5,6 +5,7 @@ import "./Reward2.css";
 import DataTradeList from "../../components/DataTradeList/DataTradeList";
 import RewardNavbar from "../../components/RewardNavbar/RewardNavbar";
 import transaction_icon from "../../images/transaction_icon.svg";
+import PointNavbar from '../../components/PointNavbar/PointNavbar';
 
 function Reward2() {
   const navigate = useNavigate();
@@ -85,7 +86,7 @@ function Reward2() {
             />
           ))}
       </div>
-      <RewardNavbar />
+      <PointNavbar />
     </>
   );
 }
