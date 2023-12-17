@@ -64,7 +64,7 @@ function Reward2() {
             fontSize: "16px",
           }}
         >
-          당신의 리워드는
+          당신의 잔액은
         </p>
         <p style={{ margin: "6px 16px", fontSize: "32px" }}>
           <b>{models ? models.total : "Loading..."} </b>
