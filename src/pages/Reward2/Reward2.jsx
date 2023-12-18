@@ -3,7 +3,6 @@ import Trading from "../../components/Trading/Trading";
 import { useNavigate } from "react-router-dom";
 import "./Reward2.css";
 import DataTradeList from "../../components/DataTradeList/DataTradeList";
-import RewardNavbar from "../../components/RewardNavbar/RewardNavbar";
 import transaction_icon from "../../images/transaction_icon.svg";
 import PointNavbar from '../../components/PointNavbar/PointNavbar';
 
@@ -19,7 +18,7 @@ function Reward2() {
   // });
 
   const handleTransferClick = () => {
-    navigate("/RewardSend"); // RewardSend 컴포넌트로 이동
+    navigate("/RewardDeposit"); // RewardSend 컴포넌트로 이동
   };
   const [models, setModels] = useState([]);
   const endpoint = "/reward/history";

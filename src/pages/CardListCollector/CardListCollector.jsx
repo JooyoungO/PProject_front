@@ -1,13 +1,13 @@
 // import React, { useState } from 'react'; //api 받아오면 삭제하기
 import React, { useEffect, useState } from 'react'; //api 받아오면 주석 풀기
 import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';  //api 받아오면 주석 풀기
+// import axios from 'axios';  //api 받아오면 주석 풀기
 import Card from '../../components/Card/Card';
 import DataTradeList from '../../components/DataTradeList/DataTradeList';
 import './CardListCollector.css';
 import DataNavbar from '../../components/DataNavbar/DataNavbar';
 import plus from '../../images/plus.svg';
-import DataSubmissionForm from '../DataSubmissionForm/DataSubmissionForm';
+// import DataSubmissionForm from '../DataSubmissionForm/DataSubmissionForm';
 
 function CardListCollector({ listTitle }) {
 
@@ -44,7 +44,7 @@ function CardListCollector({ listTitle }) {
     // ]);
 
 // function CardList({ listTitle }) {
-  const [cards, setCards] = useState([]);
+  const [cards, setCards] = useState([]);  // 카드 데이터를 상태로 관리
   const endpoint = "/collects";
 
   useEffect(() => {
@@ -54,18 +54,19 @@ function CardListCollector({ listTitle }) {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            'Authorization': 'Bearer ' + window.sessionStorage.getItem('token'),
+            Authorization: 'Bearer ' + window.sessionStorage.getItem("token"),
           },
-        });  
-        if (response.ok) {
-          const data = await response.json();
-          setCards(data);
+        });  // API 엔드포인트로 변경
 
-          console.log("성공:", data);
+        if(response.ok) {
+          const data = await response.json();
+          setCards(data.data);
+
+          console.log("성공:" , data);
         } else {
           const errorText = await response.text();
           alert(`실패: ${errorText}`);
-        }  
+        }
       } catch (error) {
         alert("오류가 발생했습니다.");
         console.error('API 호출 중 오류 발생:', error);
@@ -80,11 +81,10 @@ function CardListCollector({ listTitle }) {
       <DataTradeList listTitle="데이터 거래 목록" />
       <div className="card-list">
         {cards.map((card, index) => (
-          <Link key={index} to={`/DetailCollector/${card.id}`}>  
-            {" "}
-            {/* id 값을 URL에 포함 */}
+          <Link key={index} to={`/DetailCollector/${card.id}`} style={{ textDecoration: 'none' }}>  
+          {/* id 값을 URL에 포함 */}
             <Card 
-              id = {card.id}
+              id={card.id}
               image={card.imageUrl} 
               title={card.title}
               description={card.userName}

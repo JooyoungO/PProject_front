@@ -7,12 +7,10 @@ import userIcon from '../../images/icons/user-black.svg';
 
 function NavItem({ icon, label, className, to }) {
   return (
-    <div className={`nav-item ${className}`}>
+    <Link to={to} className={`nav-item ${className}`}>
       {icon && <img src={icon} alt={label} className="nav-icon" />}
-      <Link to={to}>
-        <span>{label}</span>
+      <span>{label}</span>
       </Link>
-    </div>
   );
 }
 

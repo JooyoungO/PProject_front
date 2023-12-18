@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./RewardDeposit.css";
 import PointNavbar from "../../components/PointNavbar/PointNavbar";
 import BackDataTradeList from "../../components/BackDataTradeList/BackDataTradeList";
@@ -7,30 +7,82 @@ import { useNavigate } from "react-router-dom";
 function RewardDeposit() {
   const navigate = useNavigate();
 
-  const [model] = useState({
+  const [model, setModel] = useState({
     databank: "0x4183...",
     mywallet: "0x92Ac...",
-    currentbalance: "2500",
+    currentbalance: "99999",
   });
 
   const [amount, setAmount] = useState("");
   const [isAmountInputVisible, setIsAmountInputVisible] = useState(false);
 
-  function onNextClickHandler() {
-    navigate("/DepositSuccess");
-  }
+  useEffect(() => {
+    const endpoint = "/member/reward";
+    const getReward = async () => {
+      try {
+        const response = await fetch(endpoint, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + window.sessionStorage.getItem("token"),
+          },
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          //TODO: 데이터를 사용하여 현재 잔액을 업데이트
+          setModel(prevState => ({
+            ...prevState,
+            currentbalance: data.data
+          }));
+        } else {
+          const errorText = await response.text();
+          alert(`실패: ${errorText}`);
+        }
+      } catch (error) {
+        alert("오류가 발생했습니다.");
+        console.error("API 호출 중 오류 발생:", error);
+      }
+    };
+
+    getReward();
+  }, []);
+
+  const onNextClickHandler = async () => {
+    const endpoint = "/reward/deposit?amount=" + amount;
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + window.sessionStorage.getItem("token"),
+        },
+      });
+
+      if(response.ok) {
+        const data = await response.json();
+        console.log("성공:", data);
+        navigate("/DepositSuccess");
+      } else {
+        const errorText = await response.text();
+        alert(`실패: ${errorText}`);
+      }
+    } catch (error) {
+      alert("오류가 발생했습니다.");
+      console.error("API 호출 중 오류 발생:", error);
+    }
+  };
 
   function onAmountInputChangeHandler(e) {
     setAmount(e.target.value);
-    setIsAmountInputVisible(e.target.value !== ""); // 입력이 있을 때만 true로 설정
+    setIsAmountInputVisible(e.target.value !== ""); 
   }
 
   return (
     <>
       <BackDataTradeList listTitle={"입금"} />
       <div className="RewardDeposit" style={{ position: "relative" }}>
-        {/* 상단바가 들어오면 margin 값을 변경해줘야 함 
-                상단바와 '결제 정보' 간격은 32px */}
+        {/* 상단바와 '결제 정보' 간의 간격 조정 */}
         <p
           style={{
             color: "black",
@@ -76,11 +128,12 @@ function RewardDeposit() {
             width: "164px",
             height: "20px",
             margin: "16px 16px 16px 16px",
-            fontSize: "24px",
+            fontSize: "20px",
             color: "#A5A5A5",
             backgroundColor: "#ffffff",
             border: "none",
             textAlign: "center",
+            color: "#000",
           }}
         />
         {amount && (
